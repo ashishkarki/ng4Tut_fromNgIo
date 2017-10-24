@@ -12,7 +12,8 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-  //@Input() hero: Hero;
+  //@Input() 
+  hero: Hero;
 
   constructor(
     private heroService: HeroService,
@@ -33,5 +34,10 @@ export class HeroDetailComponent implements OnInit {
 
   goBack() {
     this.location.back();
+  }
+
+  save() {
+    this.heroService.update(this.hero)
+      .then(() => this.goBack());
   }
 }

@@ -1,5 +1,5 @@
 import { Hero } from "./hero";
-
+//  THIS FILE CAN BE DELETED AS WE USE IN MEMORY DB
 export const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
   { id: 12, name: 'Narco' },
